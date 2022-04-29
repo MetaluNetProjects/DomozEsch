@@ -40,8 +40,8 @@
 #X obj 141 431 del 250;
 #X msg 141 455 0;
 #X msg 173 455 1;
-#X obj 104 137 nbx 5 20 -1e+37 1e+37 0 0 empty empty %battery 0 -8
-0 14 -262144 -1 -1 85 256;
+#X obj 101 118 nbx 3 20 -1e+37 1e+37 0 0 empty empty %batt 55 12 0
+14 -262144 -1 -1 0 256;
 #X obj 141 509 * 15;
 #X msg 141 532 color \$1 22 22;
 #X obj 40 464 * 100;
@@ -227,4 +227,4 @@
 #X connect 66 0 67 0;
 #X connect 67 0 62 0;
 #X connect 68 0 62 0;
-#X coords 0 -1 1 1 120 60 1 100 100;
+#X coords 0 -1 1 1 100 40 1 100 100;

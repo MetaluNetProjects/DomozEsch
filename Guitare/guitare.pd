@@ -1,7 +1,7 @@
-#N canvas 5 211 775 436 12;
+#N canvas 740 84 775 436 12;
 #X declare -path GuitareFW;
-#X obj 123 44 declare -path GuitareFW;
-#X obj 24 81 drv \$1;
+#X obj 266 36 declare -path GuitareFW;
+#X obj 45 62 drv \$1;
 #X obj 24 201 route 0 1 2;
 #X floatatom 24 225 5 0 0 0 - - -;
 #X floatatom 64 226 5 0 0 0 - - -;
@@ -33,7 +33,7 @@
 #X obj 97 305 corde \$0 0;
 #X obj 186 305 corde \$0 1;
 #X obj 272 304 corde \$0 2;
-#X obj 39 148 s \$0-ctl;
+#X obj 46 143 s \$0-ctl;
 #X obj 113 368 *~;
 #X obj 42 265 pow 2;
 #X msg 42 289 \$1 20;
@@ -70,3 +70,4 @@
 #X connect 26 0 27 0;
 #X connect 27 0 24 0;
 #X connect 31 0 24 1;
+#X coords 0 -1 1 1 120 65 1 40 40;

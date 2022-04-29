@@ -1,4 +1,4 @@
-#N canvas 51 158 562 526 12;
+#N canvas 51 158 472 407 12;
 #X declare -path zexy -lib zexy;
 #X obj 17 12 cnv 15 320 40 empty empty Domozic_Esch 20 20 2 40 -233017
 -66577 0;
@@ -31,6 +31,6 @@
 #X connect 12 0 11 0;
 #X coords 0 322 1 321 85 60 0;
 #X restore 232 117 pd Master;
-#X obj 19 158 Flute/flute 2;
+#X obj 19 201 Flute/flute 2;
 #X obj 19 131 Guitare/guitare 1;
-#X obj 19 186 Violon/violon 3;
+#X obj 19 272 Violon/violon 3;
