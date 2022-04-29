@@ -1,0 +1,72 @@
+#N canvas 5 211 775 436 12;
+#X declare -path GuitareFW;
+#X obj 123 44 declare -path GuitareFW;
+#X obj 24 81 drv \$1;
+#X obj 24 201 route 0 1 2;
+#X floatatom 24 225 5 0 0 0 - - -;
+#X floatatom 64 226 5 0 0 0 - - -;
+#X floatatom 104 227 5 0 0 0 - - -;
+#X floatatom 119 202 5 0 0 0 - - -;
+#X obj 162 242 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 186 242 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 213 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 237 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 162 212 route 0 1 2 3 4 5;
+#X obj 259 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 283 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 310 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 332 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 356 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 429 225 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
+-1 -1 1;
+#X obj 24 177 route knob bend key corde switch euler, f 68;
+#X obj 311 216 route 0 1 2;
+#X obj 97 305 corde \$0 0;
+#X obj 186 305 corde \$0 1;
+#X obj 272 304 corde \$0 2;
+#X obj 39 148 s \$0-ctl;
+#X obj 113 368 *~;
+#X obj 42 265 pow 2;
+#X msg 42 289 \$1 20;
+#X obj 42 313 line~;
+#X obj 113 392 throw~ outL;
+#X floatatom 493 231 5 0 0 0 - - -;
+#X floatatom 548 232 5 0 0 0 - - -;
+#X obj 360 304 corde \$0 3;
+#X connect 1 0 18 0;
+#X connect 1 0 23 0;
+#X connect 2 0 3 0;
+#X connect 2 0 25 0;
+#X connect 2 1 4 0;
+#X connect 2 2 5 0;
+#X connect 11 0 7 0;
+#X connect 11 1 8 0;
+#X connect 11 2 9 0;
+#X connect 11 3 10 0;
+#X connect 11 4 12 0;
+#X connect 11 5 13 0;
+#X connect 18 0 2 0;
+#X connect 18 1 6 0;
+#X connect 18 2 11 0;
+#X connect 18 3 19 0;
+#X connect 18 4 17 0;
+#X connect 19 0 14 0;
+#X connect 19 1 15 0;
+#X connect 19 2 16 0;
+#X connect 20 0 24 1;
+#X connect 21 0 24 1;
+#X connect 22 0 24 1;
+#X connect 24 0 28 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 24 0;
+#X connect 31 0 24 1;

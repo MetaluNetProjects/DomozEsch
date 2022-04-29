@@ -1,0 +1,19 @@
+FMN		Arduino
+A0		A0
+A1		A1
+A2		A2
+A3		A3
+A4		A4
+A5		A5
+
+D0		5
+D1		6 A7
+D2		9 A9 *** VBAT
+D3		10 A10
+D4		11
+D5		12 A11
+D6		13 *** LED
+
+RX		0
+TX		1
+

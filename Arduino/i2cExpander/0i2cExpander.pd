@@ -1,0 +1,163 @@
+#N canvas 669 165 726 632 10;
+#X declare -path Fraise;
+#X obj 21 38 pied/pied 0 41424;
+#X obj 21 16 declare -path Fraise;
+#X obj 34 414 fruit/receive master1;
+#X msg 37 299 c 1 c \$1;
+#X msg 70 268 10;
+#X msg 211 292 0 \$1;
+#X msg 261 292 10 \$1;
+#X floatatom 211 269 5 0 255 0 - - -;
+#X floatatom 261 271 5 0 255 0 - - -;
+#X msg 211 323 c 2 c \$1 c \$2;
+#X obj 34 435 route R;
+#X obj 15 456 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 307 271 5 0 255 0 - - -;
+#X msg 307 292 254 \$1;
+#X text 40 248 read register;
+#X text 209 252 write register;
+#X obj 19 192 fruit/fruit 1 master1 21 master;
+#X obj 19 142 fruit/fruit 1 buttons1 20 buttons;
+#X obj 245 227 metro 50;
+#X obj 245 202 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 23 520 & 1;
+#X obj 23 553 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 206 553 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 206 519 & 64;
+#X obj 240 556 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 240 521 & 128;
+#X obj 51 553 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 51 520 & 2;
+#X obj 78 554 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 78 521 & 4;
+#X obj 107 555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 136 554 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 171 553 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 107 522 & 8;
+#X obj 136 521 & 16;
+#X obj 170 521 & 32;
+#X msg 37 268 0 \, 1;
+#X obj 34 456 route 0 1, f 88;
+#X obj 34 487 f;
+#X obj 287 522 & 1;
+#X obj 287 555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 470 555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 470 521 & 64;
+#X obj 504 558 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 504 523 & 128;
+#X obj 315 555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 315 522 & 2;
+#X obj 342 556 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 342 523 & 4;
+#X obj 371 557 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 400 556 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 435 555 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 371 524 & 8;
+#X obj 400 523 & 16;
+#X obj 434 523 & 32;
+#X obj 298 489 f;
+#X obj 372 275 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 372 295 * 255;
+#X msg 372 316 10 \$1;
+#X text 398 272 lowCpuSpeed;
+#X text 521 340 thres;
+#X floatatom 477 299 5 0 255 0 - - -;
+#X msg 477 341 11 \$1;
+#X obj 187 414 fruit/receive buttons1;
+#X obj 37 390 fruit/send2 master1;
+#X obj 37 348 t a;
+#X obj 63 369 fruit/send2 buttons1;
+#X msg 100 268 10;
+#X floatatom 568 502 5 0 0 0 - - -;
+#X floatatom 625 503 5 0 0 0 - - -;
+#X obj 568 481 unpack f f;
+#X msg 131 268 11;
+#X msg 158 267 12;
+#X obj 317 228 metro 50;
+#X obj 317 203 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 157 284 time;
+#X connect 2 0 10 0;
+#X connect 3 0 65 0;
+#X connect 4 0 3 0;
+#X connect 5 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 5 0;
+#X connect 8 0 6 0;
+#X connect 9 0 65 0;
+#X connect 10 0 11 0;
+#X connect 10 0 37 0;
+#X connect 12 0 13 0;
+#X connect 13 0 9 0;
+#X connect 18 0 36 0;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;
+#X connect 23 0 22 0;
+#X connect 25 0 24 0;
+#X connect 27 0 26 0;
+#X connect 29 0 28 0;
+#X connect 33 0 30 0;
+#X connect 34 0 31 0;
+#X connect 35 0 32 0;
+#X connect 36 0 3 0;
+#X connect 37 0 38 0;
+#X connect 37 1 55 0;
+#X connect 37 2 70 0;
+#X connect 38 0 20 0;
+#X connect 38 0 35 0;
+#X connect 38 0 34 0;
+#X connect 38 0 33 0;
+#X connect 38 0 29 0;
+#X connect 38 0 27 0;
+#X connect 38 0 25 0;
+#X connect 38 0 23 0;
+#X connect 39 0 40 0;
+#X connect 42 0 41 0;
+#X connect 44 0 43 0;
+#X connect 46 0 45 0;
+#X connect 48 0 47 0;
+#X connect 52 0 49 0;
+#X connect 53 0 50 0;
+#X connect 54 0 51 0;
+#X connect 55 0 39 0;
+#X connect 55 0 54 0;
+#X connect 55 0 53 0;
+#X connect 55 0 52 0;
+#X connect 55 0 48 0;
+#X connect 55 0 46 0;
+#X connect 55 0 44 0;
+#X connect 55 0 42 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
+#X connect 58 0 9 0;
+#X connect 61 0 62 0;
+#X connect 62 0 9 0;
+#X connect 63 0 10 0;
+#X connect 65 0 64 0;
+#X connect 65 0 66 0;
+#X connect 67 0 3 0;
+#X connect 70 0 68 0;
+#X connect 70 1 69 0;
+#X connect 71 0 3 0;
+#X connect 72 0 3 0;
+#X connect 73 0 72 0;
+#X connect 74 0 73 0;
