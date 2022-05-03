@@ -1,4 +1,4 @@
-#N canvas 740 84 775 436 12;
+#N canvas 590 84 775 436 12;
 #X declare -path GuitareFW;
 #X obj 266 36 declare -path GuitareFW;
 #X obj 45 62 drv \$1;
@@ -33,7 +33,6 @@
 #X obj 97 305 corde \$0 0;
 #X obj 186 305 corde \$0 1;
 #X obj 272 304 corde \$0 2;
-#X obj 46 143 s \$0-ctl;
 #X obj 113 368 *~;
 #X obj 42 265 pow 2;
 #X msg 42 289 \$1 20;
@@ -42,10 +41,17 @@
 #X floatatom 493 231 5 0 0 0 - - -;
 #X floatatom 548 232 5 0 0 0 - - -;
 #X obj 360 304 corde \$0 3;
-#X connect 1 0 18 0;
-#X connect 1 0 23 0;
+#X obj 60 119 s Guitare-ctl;
+#X obj 24 151 spigot;
+#X obj 81 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 107 151 switch~;
+#X obj 175 117 s \$0-ctl;
+#X connect 1 0 31 0;
+#X connect 1 0 32 0;
+#X connect 1 0 35 0;
 #X connect 2 0 3 0;
-#X connect 2 0 25 0;
+#X connect 2 0 24 0;
 #X connect 2 1 4 0;
 #X connect 2 2 5 0;
 #X connect 11 0 7 0;
@@ -62,12 +68,15 @@
 #X connect 19 0 14 0;
 #X connect 19 1 15 0;
 #X connect 19 2 16 0;
-#X connect 20 0 24 1;
-#X connect 21 0 24 1;
-#X connect 22 0 24 1;
-#X connect 24 0 28 0;
+#X connect 20 0 23 1;
+#X connect 21 0 23 1;
+#X connect 22 0 23 1;
+#X connect 23 0 27 0;
+#X connect 24 0 25 0;
 #X connect 25 0 26 0;
-#X connect 26 0 27 0;
-#X connect 27 0 24 0;
-#X connect 31 0 24 1;
+#X connect 26 0 23 0;
+#X connect 30 0 23 1;
+#X connect 32 0 18 0;
+#X connect 33 0 32 1;
+#X connect 33 0 34 0;
 #X coords 0 -1 1 1 120 65 1 40 40;
