@@ -1,0 +1,7 @@
+#N canvas 1 81 450 300 12;
+#X obj 106 60 inlet~;
+#X floatatom 105 118 5 0 0 0 - - -;
+#X obj 105 89 iemlib/unsig~ 50;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X coords 0 -1 1 1 50 40 1 100 100;

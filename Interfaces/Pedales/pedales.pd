@@ -1,0 +1,52 @@
+#N canvas 590 84 775 500 12;
+#X declare -path PedalesFW;
+#X obj 24 232 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 48 232 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 70 234 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 93 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 117 233 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 140 234 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 24 151 spigot;
+#X obj 81 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 107 151 switch~;
+#X obj 175 117 s \$0-ctl;
+#X floatatom 229 231 5 0 0 0 - - -;
+#X floatatom 269 232 5 0 0 0 - - -;
+#X floatatom 309 233 5 0 0 0 - - -;
+#X obj 229 207 unpack f f f;
+#X obj 266 36 declare -path PedalesFW;
+#X obj 45 62 drv \$1;
+#X obj 24 177 route key euler, f 55;
+#X obj 24 204 route 0 1 2 3 4 5 6 7, f 27;
+#X obj 163 236 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 186 237 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 60 119 s Pedales-ctl;
+#X connect 6 0 16 0;
+#X connect 7 0 6 1;
+#X connect 7 0 8 0;
+#X connect 13 0 10 0;
+#X connect 13 1 11 0;
+#X connect 13 2 12 0;
+#X connect 15 0 6 0;
+#X connect 15 0 9 0;
+#X connect 15 0 20 0;
+#X connect 16 0 17 0;
+#X connect 16 1 13 0;
+#X connect 17 0 0 0;
+#X connect 17 1 1 0;
+#X connect 17 2 2 0;
+#X connect 17 3 3 0;
+#X connect 17 4 4 0;
+#X connect 17 5 5 0;
+#X connect 17 6 18 0;
+#X connect 17 7 19 0;
+#X coords 0 -1 1 1 120 65 1 40 40;

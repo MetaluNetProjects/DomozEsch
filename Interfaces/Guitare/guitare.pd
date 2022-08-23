@@ -1,4 +1,4 @@
-#N canvas 590 84 775 436 12;
+#N canvas 590 84 775 500 12;
 #X declare -path GuitareFW;
 #X obj 266 36 declare -path GuitareFW;
 #X obj 45 62 drv \$1;
@@ -26,7 +26,7 @@
 1;
 #X obj 356 244 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 429 225 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
+#X obj 394 214 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
 -1 -1 1;
 #X obj 24 177 route knob bend key corde switch euler, f 68;
 #X obj 311 216 route 0 1 2;
@@ -37,19 +37,23 @@
 #X obj 42 265 pow 2;
 #X msg 42 289 \$1 20;
 #X obj 42 313 line~;
-#X obj 113 392 throw~ outL;
-#X floatatom 493 231 5 0 0 0 - - -;
-#X floatatom 548 232 5 0 0 0 - - -;
+#X obj 83 411 throw~ outL;
 #X obj 360 304 corde \$0 3;
 #X obj 60 119 s Guitare-ctl;
 #X obj 24 151 spigot;
-#X obj 81 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 81 152 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 107 151 switch~;
 #X obj 175 117 s \$0-ctl;
-#X connect 1 0 31 0;
-#X connect 1 0 32 0;
-#X connect 1 0 35 0;
+#X obj 172 411 throw~ outR;
+#X floatatom 467 250 5 0 0 0 - - -;
+#X floatatom 507 251 5 0 0 0 - - -;
+#X floatatom 547 252 5 0 0 0 - - -;
+#X obj 467 226 unpack f f f;
+#X obj 328 111 print;
+#X connect 1 0 29 0;
+#X connect 1 0 30 0;
+#X connect 1 0 33 0;
 #X connect 2 0 3 0;
 #X connect 2 0 24 0;
 #X connect 2 1 4 0;
@@ -65,6 +69,7 @@
 #X connect 18 2 11 0;
 #X connect 18 3 19 0;
 #X connect 18 4 17 0;
+#X connect 18 5 38 0;
 #X connect 19 0 14 0;
 #X connect 19 1 15 0;
 #X connect 19 2 16 0;
@@ -72,11 +77,15 @@
 #X connect 21 0 23 1;
 #X connect 22 0 23 1;
 #X connect 23 0 27 0;
+#X connect 23 0 34 0;
 #X connect 24 0 25 0;
 #X connect 25 0 26 0;
 #X connect 26 0 23 0;
-#X connect 30 0 23 1;
-#X connect 32 0 18 0;
-#X connect 33 0 32 1;
-#X connect 33 0 34 0;
+#X connect 28 0 23 1;
+#X connect 30 0 18 0;
+#X connect 31 0 30 1;
+#X connect 31 0 32 0;
+#X connect 38 0 35 0;
+#X connect 38 1 36 0;
+#X connect 38 2 37 0;
 #X coords 0 -1 1 1 120 65 1 40 40;

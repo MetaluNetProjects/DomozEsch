@@ -1,0 +1,20 @@
+liste des modules (feather rfm69 + batterie):
+
+TOUCHES :
+- 9 touches + bno + (souffle)
+
+FROTTE
+- 3 ou 4 codeurs
+
+SIMPLE
+- connecteurs ? nappe de 16 ?
+
+ex : 
+- pipeau = 1 TOUCHE
+- guitare = 2 TOUCHES
+- violon/contrebasse = 1 TOUCHE + 1 FROTTE + 1 SIMPLE(archet)
+- batterie : 2 SIMPLES
+
+------------
+3 pipeaux : 3 TOUCHES
+3 batter 

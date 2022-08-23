@@ -1,4 +1,4 @@
-#N canvas 575 81 780 658 12;
+#N canvas 555 81 780 658 12;
 #X declare -path quaternion;
 #X obj 15 21 r fromArduinoDriver;
 #X obj 14 146 route 0;
@@ -41,7 +41,7 @@
 #X msg 141 455 0;
 #X msg 173 455 1;
 #X obj 101 118 nbx 3 20 -1e+37 1e+37 0 0 empty empty %batt 55 12 0
-14 -262144 -1 -1 0 256;
+14 -241291 -1 -1 85 256;
 #X obj 141 509 * 15;
 #X msg 141 532 color \$1 22 22;
 #X obj 40 464 * 100;
@@ -149,6 +149,11 @@
 #X msg 481 482 souffle \$1;
 #X obj 206 576 print;
 #X obj 329 60 declare -path quaternion;
+#X floatatom 379 413 5 0 0 0 - - -;
+#X obj 410 337 / 960;
+#X obj 410 361 clip 0 1;
+#X obj 410 385 change;
+#X obj 410 313 - 65;
 #X connect 0 0 1 0;
 #X connect 1 0 35 0;
 #X connect 1 0 53 0;
@@ -184,7 +189,6 @@
 #X connect 25 0 18 2;
 #X connect 26 0 18 3;
 #X connect 27 0 60 0;
-#X connect 27 0 20 0;
 #X connect 29 0 31 0;
 #X connect 29 1 8 0;
 #X connect 29 1 45 0;
@@ -217,7 +221,7 @@
 #X connect 55 0 62 0;
 #X connect 55 1 56 0;
 #X connect 57 0 58 0;
-#X connect 57 0 67 0;
+#X connect 57 0 74 0;
 #X connect 57 1 55 0;
 #X connect 59 0 61 0;
 #X connect 60 0 61 0;
@@ -227,4 +231,9 @@
 #X connect 65 0 66 0;
 #X connect 66 0 61 0;
 #X connect 67 0 61 0;
+#X connect 71 0 72 0;
+#X connect 72 0 73 0;
+#X connect 72 0 70 0;
+#X connect 73 0 67 0;
+#X connect 74 0 71 0;
 #X coords 0 -1 1 1 100 40 1 100 100;
