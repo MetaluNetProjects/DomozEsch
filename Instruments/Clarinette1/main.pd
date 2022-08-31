@@ -42,7 +42,7 @@
 #X floatatom 148 298 5 0 0 0 - - -;
 #X obj 68 272 unpack f f f, f 15;
 #X obj 106 42 hsl 80 15 0 1 0 1 empty empty volume 5 8 0 10 -258113
--1 -257985 2900 1;
+-1 -257985 3300 1;
 #X obj 106 61 hsl 80 15 0 1 0 1 empty empty reverb 5 8 0 10 -4034 -1
 -258113 4200 1;
 #X obj 90 346 tube_anche 0 \$0;
@@ -60,7 +60,7 @@
 #X obj 91 585 throw~ out\$1;
 #X obj 247 23 loadbang;
 #X msg 247 47 1;
-#X obj 322 447 tube_anche2 0 \$0-;
+#X obj 322 447 rem tube_anche2 0 \$0-;
 #X connect 0 0 3 0;
 #X connect 1 0 0 1;
 #X connect 1 0 2 0;

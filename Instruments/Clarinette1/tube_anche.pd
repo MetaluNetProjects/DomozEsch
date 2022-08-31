@@ -1,4 +1,4 @@
-#N canvas 200 81 1119 662 10;
+#N canvas 28 81 1119 662 10;
 #X declare -path cyclone -lib cyclone;
 #X declare -path iemlib -lib iemlib;
 #X declare -path creb -lib creb;
@@ -11,7 +11,7 @@
 #X msg 321 445 8000;
 #X obj 181 432 lop~ 5000;
 #X obj 38 478 hsl 128 15 0.08 8 1 0 empty empty empty -2 -6 0 8 -262144
--1 -1 12400 1;
+-1 -1 0 1;
 #X obj 84 458 *~ 8;
 #X floatatom 30 335 5 0 0 0 - - -;
 #X obj 711 488 mtof;
@@ -24,7 +24,7 @@
 -1 -1 0 1;
 #X floatatom 220 80 5 0 0 0 - - -;
 #X obj 226 55 hsl 128 15 0 1 0 0 empty empty string_pos -2 -8 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 3080 1;
 #X obj 341 230 hsl 128 15 0 1 0 1 empty empty caisse -2 -8 0 10 -262144
 -1 -1 8336 1;
 #X obj 36 134 hsl 128 15 10 1000 1 1 empty empty sustain -2 -8 0 10
@@ -43,7 +43,7 @@
 #X obj 304 196 hsl 128 15 0 1 0 1 empty empty force -2 -8 0 10 -262144
 -1 -1 3200 1;
 #X obj 784 87 unpack f f f, f 28;
-#X floatatom 784 108 5 0 0 0 - - -;
+#X floatatom 765 139 5 0 0 0 - - -;
 #X floatatom 876 121 5 0 0 0 - - -;
 #X floatatom 950 234 5 0 0 0 - - -;
 #X obj 180 528 outlet~;
@@ -91,7 +91,7 @@
 #X msg 566 301 set /DODECA;
 #X msg 604 321 set /GAMME;
 #X floatatom 724 343 5 0 0 0 - - -;
-#N canvas 544 159 809 584 tube-dsp 1;
+#N canvas 544 159 809 584 tube-dsp 0;
 #X obj 142 566 outlet~;
 #X obj 135 310 pow;
 #X obj 311 560 outlet~;
@@ -102,7 +102,7 @@
 #X obj 135 266 /;
 #X msg 135 288 0.01 \$1;
 #X obj 18 155 init 440;
-#N canvas 36 100 799 643 corde 1;
+#N canvas 36 100 799 643 corde 0;
 #X obj 56 442 outlet~;
 #X obj 129 392 delwrite~ \$0-corde 100;
 #X obj 127 229 *~ 0;
@@ -304,9 +304,9 @@
 #X obj 166 137 * 10;
 #X obj 28 38 inlet note;
 #X obj 422 85 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 1200 1;
+-1 -1 0 1;
 #X obj 435 174 hsl 128 15 0 1 0 0 empty empty empty -2 -6 0 8 -262144
--1 -1 1900 1;
+-1 -1 0 1;
 #X obj 433 198 pow 2;
 #X obj 660 15 inlet caisse;
 #X floatatom 250 198 5 0 0 0 - - -;
@@ -329,7 +329,7 @@
 #X obj 714 71 sel 0;
 #X obj 382 239 * 10;
 #X obj 231 13 inlet string_pos;
-#X floatatom 532 260 5 0 0 0 - - -;
+#X floatatom 532 280 5 0 0 0 - - -;
 #X obj 347 11 inlet blow;
 #X obj 641 168 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -347,6 +347,11 @@
 #X obj 271 419 lop~ 10;
 #X floatatom 609 336 8 0 0 0 - - -;
 #X obj 588 302 / 100;
+#X floatatom 627 394 5 0 0 0 - - -;
+#X obj 627 414 / 100;
+#X obj 681 299 clip 0 0.3333;
+#X obj 681 320 * 3;
+#X floatatom 681 353 5 0 0 0 - - -;
 #X obj 565 239 pow 1;
 #X connect 1 0 37 0;
 #X connect 3 0 4 0;
@@ -392,8 +397,7 @@
 #X connect 43 0 12 0;
 #X connect 44 0 10 5;
 #X connect 45 0 18 0;
-#X connect 46 0 61 0;
-#X connect 47 0 62 0;
+#X connect 47 0 67 0;
 #X connect 48 0 49 0;
 #X connect 49 0 50 0;
 #X connect 50 0 61 0;
@@ -408,8 +412,10 @@
 #X connect 59 0 52 0;
 #X connect 59 0 53 0;
 #X connect 61 0 33 0;
-#X connect 61 0 60 0;
-#X connect 62 0 61 0;
+#X connect 62 0 63 0;
+#X connect 64 0 65 0;
+#X connect 65 0 66 0;
+#X connect 67 0 61 0;
 #X restore 181 307 pd tube-dsp;
 #X f 31;
 #X obj 599 25 route souffle euler;
@@ -418,7 +424,7 @@
 #X obj 768 402 + 30.1238;
 #X obj 755 288 * 2.1237;
 #X obj 939 411 hsl 128 15 0 1 0 0 empty empty transp -2 -8 0 10 -262144
--1 -1 7234 1;
+-1 -1 7073 1;
 #X floatatom 985 34 5 0 0 0 - - -;
 #X obj 1004 88 abs;
 #X obj 1004 130 clip 0 1;
@@ -427,6 +433,7 @@
 #X obj 702 165 / 60;
 #X obj 702 186 clip 0 1;
 #X obj 977 447 r \$2-transpo;
+#X obj 702 121 abs;
 #X connect 0 0 1 0;
 #X connect 2 0 15 0;
 #X connect 3 0 7 1;
@@ -457,11 +464,8 @@
 #X connect 30 0 15 0;
 #X connect 31 0 29 0;
 #X connect 32 0 82 5;
-#X connect 33 0 34 0;
 #X connect 33 0 58 1;
-#X connect 33 1 35 0;
-#X connect 33 1 93 0;
-#X connect 33 2 89 0;
+#X connect 33 1 97 0;
 #X connect 33 2 90 0;
 #X connect 38 0 83 0;
 #X connect 39 0 40 0;
@@ -527,3 +531,4 @@
 #X connect 94 0 95 0;
 #X connect 95 0 18 0;
 #X connect 96 0 88 0;
+#X connect 97 0 93 0;
